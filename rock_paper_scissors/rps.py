@@ -9,24 +9,25 @@ def rock_paper_scissors(n):
     results = []
 
     if n == 0:
-        return []
+        return [[]]
     elif n == 1:
-        results += moves
+        for move in moves:
+            results.append([move])
     elif n == 2:
         for move1 in moves:
             for move2 in moves:
-                results.append((move1, move2))
+                results.append([move1, move2])
     elif n == 3:
         for move1 in moves:
             for move2 in moves:
                 for move3 in moves:
-                    results.append((move1, move2, move3))
+                    results.append([move1, move2, move3])
     elif n == 4:
         for move1 in moves:
             for move2 in moves:
                 for move3 in moves:
                     for move4 in moves:
-                        results.append((move1, move2, move3, move4))
+                        results.append([move1, move2, move3, move4])
 
     # if n == 0:
     #     answer.append(result)
